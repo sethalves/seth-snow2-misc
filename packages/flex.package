@@ -1,0 +1,20 @@
+(package
+ (name (flex))
+ (url "flex.tgz")
+ (library
+  (path "seth/flex.sld")
+  (version "1.0")
+  (homepage "https://github.com/sethalves")
+  (maintainers "Seth Alves <seth@hungry.com>")
+  (authors "Seth Alves <seth@hungry.com>")
+  (description "run a flex tokenizer in scheme")
+  (license BSD-style))
+ (library
+  (path "seth-tests/flex/tests.sld")
+  (version "1.0")
+  (use-for test)
+  (homepage "https://github.com/sethalves")
+  (maintainers "Seth Alves <seth@hungry.com>")
+  (authors "Seth Alves <seth@hungry.com>")
+  (description "tests for (seth flex)")
+  (license BSD-style)))

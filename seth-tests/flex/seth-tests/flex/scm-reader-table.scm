@@ -1,0 +1,1 @@
+../../../../seth-tests/flex/scm-reader-table.scm
