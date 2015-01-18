@@ -10,7 +10,7 @@
     (version "1.0")
     (url "scheme-read.tgz")
     (size 68608)
-    (checksum (md5 "980ed0c87635576bdb6fd30efee2ed4f"))
+    (checksum (md5 "3209a39f3f75cf02515694633e521f6b"))
     (library
       (name (seth scheme-read))
       (path "seth/scheme-read.sld")
@@ -21,7 +21,7 @@
       (authors "Seth Alves <seth@hungry.com>")
       (description "read scheme and keep track of whitespace.")
       (license BSD-style)
-      (depends)
+      (depends (seth flex) (seth port-extras))
       (use-for final))
     (library
       (name (seth-tests scheme-read tests))
@@ -40,7 +40,7 @@
     (version "1.0")
     (url "flex.tgz")
     (size 17408)
-    (checksum (md5 "aad47dca7f999b2825829196293c6b5e"))
+    (checksum (md5 "c55d101272b0ff219b023aac6007da88"))
     (library
       (name (seth flex))
       (path "seth/flex.sld")
