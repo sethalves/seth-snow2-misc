@@ -147,7 +147,7 @@
     (define (almost= a b tolerance)
       (<= (abs (- a b)) tolerance))
 
-    (define (vector-member v m)
+    (define (vector-member m v)
       (let loop ((i 0))
         (cond ((>= i (vector-length v)) #f)
               ((equal? (vector-ref v i) m) #t)

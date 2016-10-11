@@ -10,7 +10,7 @@
     (version "1.0")
     (url "image.tgz")
     (size 31744)
-    (checksum (md5 "55fc8575395370a39103a6f54b5d347b"))
+    (checksum (md5 "f2bcfaca586c67d4e39b4331824cb58b"))
     (library
       (name (seth image))
       (path "seth/image.sld")
@@ -160,7 +160,7 @@
     (version "1.0")
     (url "flex.tgz")
     (size 17408)
-    (checksum (md5 "83e30e1e6f3aaf55901a8d269e2a7cc5"))
+    (checksum (md5 "56192455c6127bcd6dd5040efb82ae3e"))
     (library
       (name (seth flex))
       (path "seth/flex.sld")
