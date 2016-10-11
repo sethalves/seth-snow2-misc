@@ -7,7 +7,7 @@
   (homepage "https://github.com/sethalves")
   (maintainers "Seth Alves <seth@hungry.com>")
   (authors "Seth Alves <seth@hungry.com>")
-  (description "read and write netraster files.")
+  (description "operations on data in a grid")
   (license BSD-style))
  (library
   (path "seth/raster/tests.sld")

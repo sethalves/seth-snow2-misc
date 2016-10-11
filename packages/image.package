@@ -7,7 +7,7 @@
   (homepage "https://github.com/sethalves")
   (maintainers "Seth Alves <seth@hungry.com>")
   (authors "Seth Alves <seth@hungry.com>")
-  (description "read and write netimage files.")
+  (description "image operations")
   (license BSD-style))
  (library
   (path "seth/image/tests.sld")
