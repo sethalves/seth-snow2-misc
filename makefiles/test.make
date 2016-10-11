@@ -13,6 +13,7 @@ snow2=snow2
 REPOS=\
 -r ../../../snow2-packages/snow \
 -r ../../../snow2-packages/seth \
+-r ../../../seth-snow2-misc \
 -r ../../../r7rs-srfis \
 -r ../..
 

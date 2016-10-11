@@ -1,0 +1,20 @@
+(package
+ (name (raster))
+ (url "raster.tgz")
+ (library
+  (path "seth/raster.sld")
+  (version "1.0")
+  (homepage "https://github.com/sethalves")
+  (maintainers "Seth Alves <seth@hungry.com>")
+  (authors "Seth Alves <seth@hungry.com>")
+  (description "read and write netraster files.")
+  (license BSD-style))
+ (library
+  (path "seth/raster/tests.sld")
+  (version "1.0")
+  (use-for test)
+  (homepage "https://github.com/sethalves")
+  (maintainers "Seth Alves <seth@hungry.com>")
+  (authors "Seth Alves <seth@hungry.com>")
+  (description "tests for (seth raster)")
+  (license BSD-style)))
