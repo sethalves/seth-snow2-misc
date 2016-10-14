@@ -1,0 +1,20 @@
+(package
+ (name (graph))
+ (url "graph.tgz")
+ (library
+  (path "seth/graph.sld")
+  (version "1.0")
+  (homepage "https://github.com/sethalves")
+  (maintainers "Seth Alves <seth@hungry.com>")
+  (authors "Seth Alves <seth@hungry.com>")
+  (description "data structures for graphs")
+  (license BSD-style))
+ (library
+  (path "seth/graph/tests.sld")
+  (version "1.0")
+  (use-for test)
+  (homepage "https://github.com/sethalves")
+  (maintainers "Seth Alves <seth@hungry.com>")
+  (authors "Seth Alves <seth@hungry.com>")
+  (description "tests for (seth graph)")
+  (license BSD-style)))
