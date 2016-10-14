@@ -22,7 +22,8 @@
           edge-data
           edge-set-data!
           connect-nodes)
-  (import (scheme base))
+  (import (scheme base)
+          (snow assert))
   (begin
 
     (define-record-type <node>
@@ -50,15 +51,25 @@
 
 
     (define (make-graph)
-      (make-graph~ (list)))
+      (make-graph~ (list) (list)))
 
 
-    (define (make-node graph value data)
-      (let ((node (make-node~ (list) value data)))
-        (graph-set-nodes! graph (cons node (graph-nodes graph)))))
+    (define (make-node graph . maybe-value+data)
+      (snow-assert (graph? graph))
+      (let* ((value (if (null? maybe-value+data) #f (car maybe-value+data)))
+             (data (if (or (null? maybe-value+data)
+                           (null? (cdr maybe-value+data)))
+                       #f
+                       (cadr maybe-value+data)))
+             (node (make-node~ (list) value data)))
+        (graph-set-nodes! graph (cons node (graph-nodes graph)))
+        node))
 
 
     (define (connect-nodes graph start-node end-node . maybe-value+data)
+      (snow-assert (graph? graph))
+      (snow-assert (node? start-node))
+      (snow-assert (node? end-node))
       (let* ((value (if (null? maybe-value+data) #f (car maybe-value+data)))
              (data (if (or (null? maybe-value+data)
                            (null? (cdr maybe-value+data)))
