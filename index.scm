@@ -10,7 +10,7 @@
     (version "1.0")
     (url "graph.tgz")
     (size 7680)
-    (checksum (md5 "1e395f3f7701a32c3f21f21a83d802ec"))
+    (checksum (md5 "25854ab637869e5580b85db1b3679f86"))
     (library
       (name (seth graph))
       (path "seth/graph.sld")
@@ -21,7 +21,7 @@
       (authors "Seth Alves <seth@hungry.com>")
       (description "data structures for graphs")
       (license BSD-style)
-      (depends)
+      (depends (snow assert))
       (use-for final))
     (library
       (name (seth graph tests))
