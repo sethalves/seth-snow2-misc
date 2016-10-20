@@ -10,7 +10,7 @@
     (version "1.0")
     (url "scad-model.tgz")
     (size 7168)
-    (checksum (md5 "bfeefb48d21547519ea109eaee938ab6"))
+    (checksum (md5 "62f7fbe6f688adb97ab72716bee2912a"))
     (library
       (name (seth scad-model))
       (path "seth/scad-model.sld")
@@ -229,7 +229,7 @@
     (version "1.0")
     (url "flex.tgz")
     (size 17408)
-    (checksum (md5 "3da3d2ebb57029a3b95e0a49611f02bc"))
+    (checksum (md5 "5206ae206f5093e7d19f3a98d206e54e"))
     (library
       (name (seth flex))
       (path "seth/flex.sld")

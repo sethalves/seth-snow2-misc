@@ -26,26 +26,29 @@
 
       ;; polyhedron( points = [ [X0, Y0, Z0], [X1, Y1, Z1], ... ], faces = [ [P0, P1, P2, P3, ...], ... ], convexity = N);
 
-      (cout "polyhedron( points = [" port)
+      (cout "polyhedron(\n    points = [" port)
 
-      (let ((need-spaces #f))
+      (let ((need-spaces #f)
+            (need-comma #f))
         (vector-for-each
          (lambda (vertex)
-           (if need-spaces (cout "                      " port));
+           (if need-comma (cout ",\n"))
+           (set! need-comma #t)
+           (if need-spaces (cout "              " port));
            (set! need-spaces #t)
-           (cout (format "[~a, ~a, ~a],\n"
+           (cout (format "[~a, ~a, ~a]"
                          (vector3-x vertex)
                          (vector3-y vertex)
                          (vector3-z vertex)) port))
          (coordinates-as-vector (model-vertices model)))
-        (cout "], faces = [" port))
+        (cout "],\n    faces = [" port))
 
       (let ((need-spaces #f))
         (operate-on-faces
          model
          (lambda (mesh face)
            (let ((need-comma #f))
-             (if need-spaces (cout "            " port))
+             (if need-spaces (cout ",\n             " port))
              (set! need-spaces #t)
              (cout "[" port)
              (vector-map
@@ -55,8 +58,8 @@
                 (set! need-comma #t)
                 (cout (face-corner-vertex-index face-corner) port))
               (face-corners face)))
-           (cout "],\n" port)
+           (cout "]" port)
            face)))
 
-      (cout "], convexity = 10);\n" port))
+      (cout "],\n    convexity = 10);\n" port))
     ))
