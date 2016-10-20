@@ -3,6 +3,7 @@
   (export make-graph
           graph?
           graph-nodes
+          graph-edges
           graph-set-nodes!
           make-node
           node?
