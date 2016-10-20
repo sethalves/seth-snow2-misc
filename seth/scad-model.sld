@@ -57,7 +57,7 @@
                 (if need-comma (cout ", " port))
                 (set! need-comma #t)
                 (cout (face-corner-vertex-index face-corner) port))
-              (face-corners face)))
+              (list->vector (reverse (vector->list (face-corners face))))))
            (cout "]" port)
            face)))
 

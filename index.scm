@@ -10,7 +10,7 @@
     (version "1.0")
     (url "scad-model.tgz")
     (size 7168)
-    (checksum (md5 "62f7fbe6f688adb97ab72716bee2912a"))
+    (checksum (md5 "767b0f223ecbfbee9470445008aa7de3"))
     (library
       (name (seth scad-model))
       (path "seth/scad-model.sld")
