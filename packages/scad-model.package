@@ -1,0 +1,20 @@
+(package
+ (name (scad-model))
+ (url "scad-model.tgz")
+ (library
+  (path "seth/scad-model.sld")
+  (version "1.0")
+  (homepage "https://github.com/sethalves")
+  (maintainers "Seth Alves <seth@hungry.com>")
+  (authors "Seth Alves <seth@hungry.com>")
+  (description "write scad-models")
+  (license BSD-style))
+ (library
+  (path "seth/scad-model/tests.sld")
+  (version "1.0")
+  (use-for test)
+  (homepage "https://github.com/sethalves")
+  (maintainers "Seth Alves <seth@hungry.com>")
+  (authors "Seth Alves <seth@hungry.com>")
+  (description "tests for (seth scad-model)")
+  (license BSD-style)))
