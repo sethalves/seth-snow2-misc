@@ -78,6 +78,37 @@
               (else (read p)))))
 
 
+    (define (ppm-P2->image in-port)
+      (let* ((width (c-read in-port))
+             (height (c-read in-port))
+             (max-color-value (c-read in-port))
+             (ws (read-char in-port)))
+        (cond ((or (eof-object? width)
+                   (eof-object? height)
+                   (eof-object? max-color-value)
+                   (eof-object? ws)
+                   (not (number? width))
+                   (not (number? height))
+                   (not (number? max-color-value))
+                   (not (char-whitespace? ws)))
+               (cout "ppm: bad header.\n" (current-error-port))
+               #f)
+              (else
+               (let ((img (raster-new width height (vector 0 0 0 255))))
+                 (do ((y (- height 1) (- y 1)))
+                     ((= y -1) #t)
+                   (do ((x 0 (+ x 1)))
+                       ((= x width) #t)
+                     (let* ((grey (read-u8 in-port)))
+                       (cond
+                        ((eof-object? grey)
+                         (cout "reading ppm: eof too soon 1.\n"
+                               (current-error-port))
+                         #f)
+                        (else
+                         (raster-set-pixel! img x y (vector grey grey grey 255)))))))
+                 img)))))
+
 
     (define (ppm-P6->image in-port)
       ;; let* to keep the order correct
@@ -169,6 +200,7 @@
       (let ((tag (c-read in-port)))
         (cond ((equal? tag 'P6) (ppm-P6->image in-port))
               ((equal? tag 'P4) (ppm-P4->image in-port))
+              ((equal? tag 'P2) (ppm-P2->image in-port))
               (else
                (cout "ppm: bad header.\n" (current-error-port))
                #f))))
