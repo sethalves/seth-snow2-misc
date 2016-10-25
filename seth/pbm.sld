@@ -99,7 +99,7 @@
                      ((= y -1) #t)
                    (do ((x 0 (+ x 1)))
                        ((= x width) #t)
-                     (let* ((grey (read-u8 in-port)))
+                     (let* ((grey (read in-port)))
                        (cond
                         ((eof-object? grey)
                          (cout "reading ppm: eof too soon 1.\n"
