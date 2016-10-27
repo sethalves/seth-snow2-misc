@@ -1,0 +1,20 @@
+(package
+ (name (octree))
+ (url "octree.tgz")
+ (library
+  (path "seth/octree.sld")
+  (version "1.0")
+  (homepage "https://github.com/sethalves")
+  (maintainers "Seth Alves <seth@hungry.com>")
+  (authors "Seth Alves <seth@hungry.com>")
+  (description "data structures for octrees")
+  (license BSD-style))
+ (library
+  (path "seth/octree/tests.sld")
+  (version "1.0")
+  (use-for test)
+  (homepage "https://github.com/sethalves")
+  (maintainers "Seth Alves <seth@hungry.com>")
+  (authors "Seth Alves <seth@hungry.com>")
+  (description "tests for (seth octree)")
+  (license BSD-style)))
