@@ -9,8 +9,8 @@
     (name (octree))
     (version "1.0")
     (url "octree.tgz")
-    (size 5632)
-    (checksum (md5 "90cdd9ae423e8ae5477a036983967145"))
+    (size 10752)
+    (checksum (md5 "904121c5b9ed7cb68d2ffa56b87b78fe"))
     (library
       (name (seth octree))
       (path "seth/octree.sld")
@@ -21,7 +21,7 @@
       (authors "Seth Alves <seth@hungry.com>")
       (description "data structures for octrees")
       (license BSD-style)
-      (depends (snow assert))
+      (depends (snow assert) (seth math-3d))
       (use-for final))
     (library
       (name (seth octree tests))
@@ -39,8 +39,8 @@
     (name (scad-model))
     (version "1.0")
     (url "scad-model.tgz")
-    (size 7168)
-    (checksum (md5 "08b085f6a7b1cae279031c5fb112c7d3"))
+    (size 16384)
+    (checksum (md5 "d66f823fc6b9838bf9559d1087219041"))
     (library
       (name (seth scad-model))
       (path "seth/scad-model.sld")
@@ -259,7 +259,7 @@
     (version "1.0")
     (url "flex.tgz")
     (size 17408)
-    (checksum (md5 "5206ae206f5093e7d19f3a98d206e54e"))
+    (checksum (md5 "8a6fd57cf8b0968a06a7a65c0b88898b"))
     (library
       (name (seth flex))
       (path "seth/flex.sld")
