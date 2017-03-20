@@ -29,8 +29,6 @@
           scad-polygon?
           scad-polygon-points
           scad-polygon-set-points!
-          scad-polygon-faces
-          scad-polygon-set-faces!
           scad-polygon-convexity
           scad-polygon-set-convexity!
 
@@ -43,10 +41,10 @@
 
           make-scad-cube
           scad-cube?
-          scad-cube-radius
-          scad-cube-set-radius!
-          scad-cube-fn
-          scad-cube-set-fn!
+          scad-cube-size
+          scad-cube-set-size!
+          scad-cube-center
+          scad-cube-set-center!
 
           make-scad-polyhedron
           scad-polyhedron?
@@ -263,7 +261,10 @@
 
 
     (define (write-scad-item item indent port)
-      (cond ((number? item) (cout (format "~a" item) port))
+      (cond ((number? item)
+             ;; (cout (format "~a" item) port)
+             (cout (number->pretty-string item 6) port)
+             )
             ((string? item) (cout item port))
             ((vector? item) (write-scad-vector item indent port))
             ((list? item) (write-scad-item (list->vector item) indent port))
