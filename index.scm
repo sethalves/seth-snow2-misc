@@ -9,8 +9,8 @@
     (name (octree))
     (version "1.0")
     (url "octree.tgz")
-    (size 10752)
-    (checksum (md5 "904121c5b9ed7cb68d2ffa56b87b78fe"))
+    (size 11264)
+    (checksum (md5 "1c7d0b0baaa0455807d8c29e3b2e2c2b"))
     (library
       (name (seth octree))
       (path "seth/octree.sld")
@@ -259,7 +259,7 @@
     (version "1.0")
     (url "flex.tgz")
     (size 17408)
-    (checksum (md5 "8a6fd57cf8b0968a06a7a65c0b88898b"))
+    (checksum (md5 "ead9308afb6d4dbd5a9299fa3cd55875"))
     (library
       (name (seth flex))
       (path "seth/flex.sld")
