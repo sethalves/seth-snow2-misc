@@ -1,0 +1,20 @@
+(package
+ (name (ieee-754))
+ (url "ieee-754.tgz")
+ (library
+  (path "seth/ieee-754.sld")
+  (version "1.0")
+  (homepage "https://github.com/sethalves")
+  (maintainers "Seth Alves <seth@hungry.com>")
+  (authors "Seth Alves <seth@hungry.com>")
+  (description "convert to or from ieee-754 floating-point format")
+  (license BSD-style))
+ (library
+  (path "seth/ieee-754/tests.sld")
+  (version "1.0")
+  (use-for test)
+  (homepage "https://github.com/sethalves")
+  (maintainers "Seth Alves <seth@hungry.com>")
+  (authors "Seth Alves <seth@hungry.com>")
+  (description "tests for (seth ieee-754)")
+  (license BSD-style)))
